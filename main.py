@@ -43,7 +43,7 @@ class Img2PixApp:
         # Configure grid weights
         self.root.grid_columnconfigure(1, weight=2)
         self.root.grid_columnconfigure(2, weight=2)
-        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_rowconfigure(1, weight=1)  # Main content row gets all the space
         
         self._create_control_panel()
         self._create_image_previews()
@@ -51,17 +51,17 @@ class Img2PixApp:
     
     def _create_menu_bar(self):
         """Create the top menu bar with file operations."""
-        menu_frame = ctk.CTkFrame(self.root, height=60)
-        menu_frame.grid(row=0, column=0, columnspan=3, sticky="ew", padx=10, pady=(10, 0))
+        menu_frame = ctk.CTkFrame(self.root, height=50)
+        menu_frame.grid(row=0, column=0, columnspan=3, sticky="ew", padx=10, pady=(10, 5))
         menu_frame.grid_columnconfigure(4, weight=1)  # Expand space after buttons
         
         # Title
         title_label = ctk.CTkLabel(
             menu_frame, 
             text="Img2Pix", 
-            font=ctk.CTkFont(size=24, weight="bold")
+            font=ctk.CTkFont(size=20, weight="bold")
         )
-        title_label.grid(row=0, column=0, padx=20, pady=15)
+        title_label.grid(row=0, column=0, padx=15, pady=10)
         
         # File operation buttons
         MaterialButton(
@@ -69,7 +69,7 @@ class Img2PixApp:
             text="📁 Open Image",
             command=self._open_image,
             width=120
-        ).grid(row=0, column=1, padx=10, pady=15)
+        ).grid(row=0, column=1, padx=10, pady=10)
         
         MaterialButton(
             menu_frame, 
@@ -77,7 +77,7 @@ class Img2PixApp:
             command=self._save_image,
             button_type="success",
             width=120
-        ).grid(row=0, column=2, padx=10, pady=15)
+        ).grid(row=0, column=2, padx=10, pady=10)
         
         MaterialButton(
             menu_frame, 
@@ -85,7 +85,7 @@ class Img2PixApp:
             command=self._reset_all,
             button_type="secondary",
             width=100
-        ).grid(row=0, column=3, padx=10, pady=15)
+        ).grid(row=0, column=3, padx=10, pady=10)
     
     def _create_control_panel(self):
         """Create the left control panel with parameters."""
