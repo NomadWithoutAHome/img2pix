@@ -10,10 +10,9 @@ from typing import Optional
 
 import customtkinter as ctk
 
-from image_processor import ImageProcessor
-from ui_components import (
-    MaterialButton, ImagePreviewFrame, ParameterPanel,
-    ProgressFrame, MaterialSlider
+from utility import (
+    ImageProcessor, MaterialButton, ImagePreviewFrame, 
+    ParameterPanel, ProgressFrame, MaterialSlider
 )
 
 
@@ -311,7 +310,7 @@ class Img2PixApp:
             title="Save pixel art image",
             filetypes=file_types,
             defaultextension=".png",
-            initialvalue=suggested_name
+            initialfile=suggested_name
         )
         
         if file_path:

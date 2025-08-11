@@ -69,19 +69,26 @@ The application follows clean architecture principles with separation of concern
 
 ```
 img2pix/
-├── main.py              # Main application and UI coordination
-├── image_processor.py   # Core image processing logic
-├── ui_components.py     # Reusable UI components
+├── main.py              # Main application entry point and UI coordination
+├── utility/             # Utility package containing core functionality
+│   ├── __init__.py      # Package initialization with clean imports
+│   ├── image_processor.py   # Core image processing logic
+│   └── ui_components.py     # Reusable UI components and widgets
 ├── requirements.txt     # Project dependencies
-└── README.md           # Documentation
+├── .gitignore          # Git ignore patterns (includes __pycache__)
+├── .gitattributes      # Git file handling and line ending rules
+└── README.md           # Project documentation
 ```
 
 ### Architecture
 
-- **ImageProcessor**: Handles all image operations (loading, processing, saving)
-- **UI Components**: Modular, reusable widgets following Material Design
-- **Main Application**: Coordinates UI and processing, handles events
+- **`main.py`**: Application entry point, coordinates UI and processing, handles events
+- **`utility/` Package**: Organized utility modules with clean imports
+  - **`ImageProcessor`**: Handles all image operations (loading, processing, saving)
+  - **UI Components**: Modular, reusable widgets following Material Design principles
+- **Package Design**: Proper Python package structure with `__init__.py` for clean imports
 - **Threading**: Non-blocking image processing for smooth user experience
+- **Git Configuration**: Comprehensive ignore rules and file attribute handling
 
 ## Supported Formats
 
