@@ -2,6 +2,9 @@
 
 A modern Python application with Material UI design that converts any image into stunning pixel art. Built with separation of concerns, following PEP standards, and implementing DRY principles.
 
+## Screenshot
+<img src="https://www.imghost.dohmboy64.com/i/1602f19ca8674b74a9d49bb9e206fd8c.png" alt="Description" width="300"/>
+
 ## Features
 
 - 🎨 **Modern Material UI Interface** - Clean, intuitive design with dark theme
