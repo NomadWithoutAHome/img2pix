@@ -78,7 +78,7 @@ img2pix/
 
 ### Architecture
 
-- **`ImageProcessor`**: Handles all image operations (loading, processing, saving)
+- **ImageProcessor**: Handles all image operations (loading, processing, saving)
 - **UI Components**: Modular, reusable widgets following Material Design
 - **Main Application**: Coordinates UI and processing, handles events
 - **Threading**: Non-blocking image processing for smooth user experience
