@@ -11,6 +11,9 @@ A modern Python application with Material UI design that converts any image into
 - 💾 **Multiple Formats** - Support for PNG, JPEG, BMP, GIF, and TIFF
 - 🧵 **Non-blocking Processing** - Threaded processing keeps UI responsive
 - 📊 **Progress Tracking** - Visual progress indicators for all operations
+- 🔍 **Advanced Transparency Support** - Full RGBA and alpha channel preservation
+- 🎮 **Game Asset Ready** - Perfect for sprites, icons, and UI elements
+- 🌈 **Smart Background Handling** - Configurable background compositing
 
 ## Screenshot
 
@@ -62,6 +65,9 @@ The application features a three-panel layout:
 - **Retro Game Style**: Use 8-16 pixel size with 8-32 colors
 - **High Contrast**: Increase contrast to 1.3-1.5 for more defined edges
 - **Vibrant Colors**: Boost saturation to 1.2-1.5 for more vivid pixel art
+- **Transparent Images**: PNG format preserves transparency perfectly
+- **Game Sprites**: Perfect for character sprites and UI elements
+- **Icons & Logos**: Maintains crisp transparent edges
 
 ## Project Structure
 
@@ -90,17 +96,73 @@ img2pix/
 - **Threading**: Non-blocking image processing for smooth user experience
 - **Git Configuration**: Comprehensive ignore rules and file attribute handling
 
+## Advanced Features
+
+### 🔍 Transparency Support
+
+Img2Pix provides comprehensive transparency handling for professional pixel art creation:
+
+#### **Supported Transparency Types**
+- **RGBA Images** - Full 32-bit transparency (PNG)
+- **Palette Transparency** - GIF-style transparency
+- **Alpha Channels** - Variable transparency levels
+- **Binary Transparency** - Fully transparent or opaque pixels
+
+#### **Smart Processing**
+- **Automatic Detection** - Identifies transparent images automatically
+- **Channel Separation** - Processes RGB and alpha channels independently
+- **Edge Preservation** - Maintains crisp transparent edges during pixelation
+- **Color Quantization** - Reduces colors while preserving transparency
+- **Background Compositing** - Optional background color application
+
+#### **Perfect For**
+- 🎮 **Game Sprites** - Character animations and game assets
+- 🏷️ **Icons & Logos** - UI elements with transparent backgrounds
+- 🖼️ **Interface Graphics** - Buttons, panels, and HUD elements
+- 🎨 **Digital Art** - Layered artwork with transparency
+
+#### **Technical Implementation**
+- Uses RGBA mode for transparent images
+- Nearest-neighbor resampling preserves alpha edges
+- Separate color quantization for RGB and alpha channels
+- Optional background compositing with configurable colors
+- Maintains transparency throughout the entire processing pipeline
+
+### 🎯 Use Cases
+
+#### **Game Development**
+- Character sprites with transparent backgrounds
+- UI elements and interface graphics
+- Tile sets and environmental assets
+- Animation frames with alpha channels
+
+#### **Digital Art & Design**
+- Logo pixelization with transparency
+- Icon creation for applications
+- Retro-style graphics with modern transparency
+- Layered artwork preparation
+
+#### **Web & Mobile**
+- Pixelated icons for retro-themed websites
+- Mobile app graphics with transparency
+- Social media profile images
+- Custom emoji and stickers
+
 ## Supported Formats
 
 ### Input Formats
-- PNG, JPEG, JPG
-- BMP, GIF, TIFF
-- Most common image formats
+- **PNG** - Full RGBA transparency support
+- **GIF** - Palette-based transparency
+- **JPEG, JPG** - Opaque images only
+- **BMP** - Basic bitmap support
+- **TIFF** - Advanced format support
+- Most common image formats with automatic format detection
 
 ### Output Formats
-- PNG (recommended for pixel art)
-- JPEG (with quality settings)
-- BMP (uncompressed)
+- **PNG** - Recommended for transparency and pixel art quality
+- **JPEG** - Opaque images with quality settings (1-100)
+- **BMP** - Uncompressed bitmap format
+- Automatic format detection based on file extension
 
 ## Technical Details
 
